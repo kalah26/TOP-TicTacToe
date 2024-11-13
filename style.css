@@ -1,39 +1,70 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *::after, *::before {
-    box-sizing: inherit;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #cccccc67;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.dashboard {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 80%;
+main {
+  background-color:#ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+  border-radius: 1.5em;
 }
 
-.game-board {
+main h1 {
+  margin-bottom: 1em;
+}
+
+#gameboard {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
-    gap: 10px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: .5em;
+  }
+  
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4e3ec7c;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 1rem;
 }
 
-.case {
-    background-color: rgb(41, 185, 185);
-    cursor: pointer;
-    border: 0;
-    border-radius: 1em;
+.cell:hover {
+  background-color: #cccccc86;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+}
+  
+#startBtn {
+  font-size: 18px;
+  width: 100%;
+  padding: 1rem 2em;
+  background-color: #0918ec;
+  color: #eee;
+  border-radius: 1em;
+  border: none;
 }
